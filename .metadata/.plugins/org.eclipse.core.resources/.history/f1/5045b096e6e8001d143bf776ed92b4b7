@@ -1,0 +1,25 @@
+package it.epicode.be;
+
+public class Helloworld {
+
+public static void main (String[] args)
+		{
+		// Stampa a console  la frase
+		System.out.println("This is my first Epicode Java Project!");
+		//Esercizio #2
+		System.out.println(moltiplica(4,3));
+		System.out.println(concatena("fra",3));
+
+		}
+
+public static int moltiplica(int n1, int n2) {
+	return n1 * n2;
+};
+public static String concatena(String es2, int es22) {
+	return es2 + es22;
+}
+
+}
+
+
+
