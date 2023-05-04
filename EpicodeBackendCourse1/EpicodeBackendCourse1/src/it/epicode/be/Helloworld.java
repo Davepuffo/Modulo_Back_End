@@ -15,8 +15,9 @@ public static void main (String[] args)
 		
 		String es3 [] = {"ciao", "a", "tutti", "sono", "davide"};
 		String es33 = "wewe";
-		for (int i = 0; i < inserisciInArray.lenght, i++) {
-			System.out.println(inserisciInArray[i]);
+		String [] returnArr = inserisciInArray (es3, es33);
+		for (int i = 0; i < returnArr.length; i++) {
+			System.out.println(returnArr[i]);
 		}
 		
 		esercizio3();
