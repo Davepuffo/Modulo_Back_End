@@ -1,11 +1,16 @@
 package Esercizio;
 
-public class ElementoMultimediale {
+public abstract class ElementoMultimediale {
+
 	protected String titolo;
 	
-	protected void play();
+	public ElementoMultimediale(String titolo) {
+		this.titolo = titolo;
+	}
 	
-	protected void play();
+	@Override
+	public String toString() {
+		return "titolo= " + titolo + " ";
+	}
 
-	
 }
