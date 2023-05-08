@@ -1,4 +1,4 @@
-package test;
+package Esercizio1;
 
 public class MainProject {
 
