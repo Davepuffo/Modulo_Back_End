@@ -1,0 +1,4 @@
+10:43:18.079 [main] INFO  com.epicode.test.log.MainProject - Test Logger!!
+10:43:18.091 [main] ERROR com.epicode.test.log.MainProject - Test Error!!
+10:43:18.098 [main] WARN  com.epicode.test.log.MainProject - Test Warning!!
+10:43:18.100 [main] DEBUG com.epicode.test.log.MainProject - Test Debug!!
