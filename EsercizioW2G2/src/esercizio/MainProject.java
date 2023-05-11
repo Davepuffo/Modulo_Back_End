@@ -13,7 +13,6 @@ public class MainProject {
 	static Logger log = LoggerFactory.getLogger(MainProject.class);
 
 	public static void main(String[] args) {
-		
 		Esercizio1();
 		
 	}
@@ -23,7 +22,7 @@ public class MainProject {
 		System.out.println("Inserisci il numero di elementi:");
 		int numeroElementi = Integer.parseInt(sc.nextLine());
 		for(int i = 0; i < numeroElementi; i++) {
-			System.out.println("Inserisci una parola:");
+			System.out.print("Inserisci una parola:");
 			String parola = sc.nextLine();
 			s.add(parola);
 		}

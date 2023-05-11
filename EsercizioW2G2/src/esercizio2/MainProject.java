@@ -19,7 +19,7 @@ public class MainProject {
 		numeriPariDispari(l, false);
 	}
 	
-	public static List numeriCasuali (int x) {
+	public static List <Integer> numeriCasuali (int x) {
 		for (int i= 0; i< x ; i++) {
 			int numero = (int) (Math.random() * 100);
 			l.add(numero);
@@ -30,11 +30,12 @@ public class MainProject {
 		return l;	
 	}
 	
-	public static List mescolaNumeri (List l) {
-		li.addAll(l);		
-		Collections.shuffle(l);
+	public static List <Integer> mescolaNumeri (List <Integer> l) {
 		li.addAll(l);
-		System.out.println("I numeri casuali più quelli mescolati  sono:");
+		for (int i = l.size()-1; i >= 0 ; i--) {
+			li.add(l.get(i));
+		}
+		System.out.println("I numeri casuali più quelli mescolati sono:");
 		li.forEach(e -> System.out.println(e));		
 		return li;
 	}
@@ -42,19 +43,13 @@ public class MainProject {
 	public static void numeriPariDispari (List l, boolean v) {
 		if (v == true) {
 			System.out.println("Numeri pari");
-			for(int i = 0; i < l.size(); i++) {
-				int r = (int) l.get(i);
-				if(r % 2 == 0) {
-					System.out.println(r);
-				}
+			for(int i = 0; i < l.size(); i+=2) {
+				System.out.println(l.get(i));
 			}			
 		} else {
 			System.out.println("Numeri dispari");
-			for(int i = 0; i < l.size(); i++) {
-				int r = (int) l.get(i);
-				if(r % 2 != 0) {
-					System.out.println(r);
-				}
+			for(int i = 1; i < l.size(); i+=2) {
+				System.out.println(l.get(i));
 			}
 		}
 	}
