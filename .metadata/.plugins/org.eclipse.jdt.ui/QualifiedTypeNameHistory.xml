@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
@@ -9,15 +8,19 @@
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="org.slf4j.Logger"/>
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="org.apache.commons.io.FileUtils"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="esercizio.Product"/>
     <fullyQualifiedTypeName name="esercizio.Customer"/>
+    <fullyQualifiedTypeName name="esercizio.Libro"/>
+    <fullyQualifiedTypeName name="esercizio.Rivista"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="org.apache.commons.io.FileUtils"/>
 </qualifiedTypeNameHistroy>

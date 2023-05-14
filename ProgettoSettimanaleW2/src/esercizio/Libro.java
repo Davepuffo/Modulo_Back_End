@@ -90,9 +90,9 @@ public class Libro extends Elemento {
 
 	@Override
 	public String toString() {
-		return " [CodiceISBN= " + getCodiceISBN()
+		return "Libro: [CodiceISBN= " + getCodiceISBN()
 				+ ", Titolo= " + getTitolo() + ", Anno= " + getAnno() + ", Numero Pagine= " + getnPagine()
-				+ ", Autore= " + getAutore() + ", Genere= " + getGenere() + "]";
+				+ ", Autore= " + getAutore() + ", Genere= " + getGenere() + "]! ";
 	}
 	
 
