@@ -2,9 +2,12 @@ package esercizio;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import org.apache.commons.io.FileUtils;
+
+import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +17,7 @@ public class MainProject {
 	static List<Elemento> Archivio = new ArrayList<Elemento>();
 	
 	static File file = new File("listaArticoli/articoli.txt");
+	static Scanner sc = new Scanner (System.in);
 
 	public static void main(String[] args) {
 		
@@ -24,6 +28,8 @@ public class MainProject {
 		Rivista r1 = new Rivista("R001", "Gazzetta dello sport", 2023, 21, Periodicità.SETTIMANALE );
 		Rivista r2 = new Rivista("R002", "Quattroruote", 2023, 40, Periodicità.MENSILE );
 		Rivista r3 = new Rivista("R003", "Topolino", 2020, 28, Periodicità.SEMESTRALE );
+		Rivista r4 = new Rivista("R003", "Topolino", 2020, 28, Periodicità.SEMESTRALE );
+
 		
 		aggiungiElemento(l1);
 		aggiungiElemento(l2);
@@ -31,34 +37,33 @@ public class MainProject {
 		aggiungiElemento(r1);
 		aggiungiElemento(r2);
 		aggiungiElemento(r3);
-		
+		aggiungiElemento(r4);
 		//rimuoviElemento("L001");
 		
-		for (Elemento parola1 : Archivio) {
-			//System.out.println("  - " + parola1);
-		}
-		
-		List<Elemento> filtroPerCodice = ricercaPerISBN("R001");
-		for (Elemento parola1 : filtroPerCodice) {
-			//System.out.println("  - filtro " + parola1);
-		}
-		
-		List<Elemento> filtroPerAnno = ricercaPerAnno(2023);
-		for (Elemento parola2 : filtroPerAnno) {
-			//System.out.println("  - filtro anno " + parola2);
-		}
-		
-		List<Libro> filtroPerAutore = ricercaPerAutore("Adamoli");
-		for (Elemento parola2 : filtroPerAutore) {
-			//System.out.println("  - filtro autore " + parola2);
-		}
-		
+
 		try {
-			scriviFile();
-			for (String a : leggiFile()){
-				System.out.println(a);				
+			List<Elemento> filtroPerCodice = ricercaPerISBN("R001");
+			System.out.println("Ricerca per codice ISBN:");
+			for (Elemento parola1 : filtroPerCodice) {
+				System.out.println("  - " +parola1);
 			}
-			//cancellaFile();
+			
+			List<Elemento> filtroPerAnno = ricercaPerAnno(2023);
+			System.out.println("Ricerca per anno:");
+			for (Elemento parola2 : filtroPerAnno) {
+				System.out.println("  - " + parola2);
+			}
+			
+			List<Libro> filtroPerAutore = ricercaPerAutore("Adamoli");
+			System.out.println("Ricerca per autore:");
+			for (Elemento parola2 : filtroPerAutore) {
+				System.out.println("  - " + parola2);
+			}
+			
+			scriviFile();
+			System.out.println("----------------------------------------------------------------------------------------------------------------");
+			System.out.println("Tutti gli elementi presenti nell'archivio sono:");
+			leggiFile();			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -106,16 +111,31 @@ public class MainProject {
 	}
 	
 	public static void scriviFile() throws IOException {
-		for (Elemento a : Archivio) {
-			String app = a.toString();
-			FileUtils.writeStringToFile(file, app , "UTF-8", true);
+		if(file.exists()) {
+			cancellaFile();
+			for (Elemento a : Archivio) {
+				String app = a.toString();
+				FileUtils.writeStringToFile(file, app , "UTF-8", true);
+			}
+			} else {
+			for (Elemento a : Archivio) {
+				String app = a.toString();
+				FileUtils.writeStringToFile(file, app , "UTF-8", true);
+			}
 		}
 	}
 	
-	public static String[] leggiFile() throws IOException {
-		String lettura =  FileUtils.readFileToString(file, "UTF-8");
-		String[] lettura1 = lettura.split("! ");
-		return lettura1;
+	public static void leggiFile() throws IOException {
+		if (file.exists()) {
+			String lettura =  FileUtils.readFileToString(file, "UTF-8");
+			String[] lettura1 = lettura.split("! ");
+			for (String a : lettura1){
+				System.out.println(a);				
+			}
+			return;
+		}
+		System.out.println("Non è presente nessun file di dati!");
+		return;
 	}
 	
 	public static void cancellaFile() throws IOException {

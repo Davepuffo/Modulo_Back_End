@@ -69,8 +69,8 @@ public class Rivista extends Elemento {
 
 		@Override
 		public String toString() {
-			return "Rivista: [Periodicità= " + getTipo() + ", CodiceISBN= " + getCodiceISBN()
-					+ ", getTitolo= " + getTitolo() + ", Anno= " + getAnno() + ", Numero Pagine= " + getnPagine()
+			return "Rivista: [CodiceISBN= " + getCodiceISBN()
+					+ ", Titolo= " + getTitolo() + ", Periodicità= " + getTipo() +", Anno= " + getAnno() + ", Numero Pagine= " + getnPagine()
 					+ "]! ";
 		}
 		
