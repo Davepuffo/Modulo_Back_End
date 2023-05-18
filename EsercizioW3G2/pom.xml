@@ -4,6 +4,12 @@
   <artifactId>EsercizioW3G2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>5.6.14.Final</version>
+	</dependency>
       <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
     <dependency>
         <groupId>org.postgresql</groupId>
