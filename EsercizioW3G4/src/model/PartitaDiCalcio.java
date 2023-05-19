@@ -18,6 +18,7 @@ public class PartitaDiCalcio extends Evento {
 	private Integer golSquadraCasa;
 	@Column(nullable = false)
 	private Integer golSquadraOspite;
+	
 	public String getSquadraCasa() {
 		return squadraCasa;
 	}
