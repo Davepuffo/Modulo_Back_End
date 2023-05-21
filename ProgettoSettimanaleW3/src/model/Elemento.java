@@ -5,16 +5,25 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table (name= "elementi")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@NamedQuery(name = "elementoPerAnno", query = "SELECT e FROM Elemento e WHERE e.anno = :prmt")
+@NamedQuery(name = "elementoPerAutore", query = "SELECT e FROM Elemento e WHERE e.autore = :prmt")
+@NamedQuery(name = "elementoPerTitolo", query = "SELECT e FROM Elemento e WHERE e.titolo LIKE :prmt")
+@NamedQuery(name = "tuttiElementi", query = "SELECT e FROM Elemento e")
+
 public class Elemento {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	private Integer codiceISBN;
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String titolo;
 	@Column(nullable = false)
 	private int anno;
@@ -59,7 +68,7 @@ public class Elemento {
 	
 	@Override
 	public String toString() {
-		return "Elemento [codiceISBN=" + codiceISBN + ", titolo=" + titolo + ", anno=" + anno + ", nPagine=" + nPagine
+		return "codiceISBN=" + codiceISBN + ", titolo=" + titolo + ", anno=" + anno + ", nPagine=" + nPagine
 				+ "]";
 	}
 	

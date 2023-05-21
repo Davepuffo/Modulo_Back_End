@@ -7,10 +7,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "utenti")
+@NamedQuery(name = "tuttiUtenti", query = "SELECT u FROM Utente u")
+
 public class Utente {
 
 	@Id
@@ -69,7 +74,7 @@ public class Utente {
 
 	@Override
 	public String toString() {
-		return "Utente [numeroTessera=" + numeroTessera + ", nome=" + nome + ", cognome=" + cognome + ", dataNascita="
+		return " [numeroTessera=" + numeroTessera + ", nome=" + nome + ", cognome=" + cognome + ", dataNascita="
 				+ dataNascita + "]";
 	}
 	
