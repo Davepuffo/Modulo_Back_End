@@ -3,9 +3,12 @@ package com.example.project.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.project.model.Postazione;
+import com.example.project.enumeration.TipoPostazione;
+import com.example.project.models.Edificio;
+import com.example.project.models.Postazione;
 
 @Repository
-public interface PostazioneDaoRepository extends JpaRepository <Postazione, Long>{
+public interface PostazioneDAORepository extends JpaRepository<Postazione, Long> {
 
+	public Postazione findByDescrizioneAndEdificio(String descrizione, Edificio edificio);
 }

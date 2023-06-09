@@ -8,10 +8,10 @@
 		<version>3.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>EsercizioW5G2</artifactId>
+	<groupId>com.epicode</groupId>
+	<artifactId>SpringPrenotazioniAziendali</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>EsercizioW5G2</name>
+	<name>SpringPrenotazioniAziendali</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
