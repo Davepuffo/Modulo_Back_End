@@ -33,19 +33,20 @@ public class DispositivoController {
 	}
 	
 	@PostMapping
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
 	public ResponseEntity<?> create (@RequestBody Dispositivo d){
 		return ResponseEntity.ok(dispositivoService.createDispositivo(d));
 	}
 	
 	@PutMapping("/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
+
 	public ResponseEntity<?> update (@PathVariable Long id,@RequestBody Dispositivo d){
 		return ResponseEntity.ok(dispositivoService.updateDispositivo(id, d));
 	}
 	
 	@DeleteMapping("/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
 	public ResponseEntity<?> delete (@PathVariable Long id){
 		return ResponseEntity.ok(dispositivoService.deleteDispositivo(id));
 	}

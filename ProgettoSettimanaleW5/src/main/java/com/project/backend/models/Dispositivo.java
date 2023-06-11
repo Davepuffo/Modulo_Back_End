@@ -27,4 +27,5 @@ public class Dispositivo {
 	@Column (nullable = false)
 	private StatoDispositivo stato;
 	
+	
 }

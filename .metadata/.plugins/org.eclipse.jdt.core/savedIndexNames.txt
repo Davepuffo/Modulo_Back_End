@@ -15,7 +15,6 @@ INDEX VERSION 1.132+C:\Users\user\Desktop\Eclipse\.metadata\.plugins\org.eclipse
 3033972644.index
 2832015255.index
 2081729049.index
-1240919778.index
 701311455.index
 2533141770.index
 1514169189.index

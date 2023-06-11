@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,5 +33,9 @@ public class Utente {
 	private String email;
 	
 	@OneToMany
+	@JoinTable(name = "dispositivi_in_possesso",
+    joinColumns = @JoinColumn(name = "utente_id", referencedColumnName = "id"),
+    inverseJoinColumns = @JoinColumn(name = "dispositivo_id", referencedColumnName = "id")
+	)
 	private List<Dispositivo> dispositiviInPossesso;
 }

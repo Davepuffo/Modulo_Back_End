@@ -32,16 +32,19 @@ public class UtenteController {
 	}
 	
 	@PostMapping
+	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
 	public ResponseEntity<?> create (@RequestBody Utente u){
 		return ResponseEntity.ok(utenteService.createUtente(u));
 	}
 	
 	@PutMapping("/{id}")
+	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
 	public ResponseEntity<?> update (@PathVariable Long id, @RequestBody Utente u){
 		return ResponseEntity.ok(utenteService.updateUtente(id, u));
 	}
 	
 	@DeleteMapping("/{id}")
+	@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
 	public ResponseEntity<?> delete (@PathVariable Long id){
 		return ResponseEntity.ok(utenteService.deleteUtente(id));
 	}
