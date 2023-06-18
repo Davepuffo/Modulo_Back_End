@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.JoinTable"/>
-    <fullyQualifiedTypeName name="com.epicode.project.security.JwtAuthenticationFilter"/>
-    <fullyQualifiedTypeName name="com.epicode.project.security.JwtAuthenticationEntryPoint"/>
-    <fullyQualifiedTypeName name="com.project.security.security.JwtTokenProvider"/>
-    <fullyQualifiedTypeName name="com.project.security.exception.MyAPIException"/>
-    <fullyQualifiedTypeName name="com.project.security.repository.RoleRepository"/>
-    <fullyQualifiedTypeName name="com.project.security.repository.UserRepository"/>
-    <fullyQualifiedTypeName name="com.project.security.entity.User"/>
-    <fullyQualifiedTypeName name="com.project.security.entity.Role"/>
-    <fullyQualifiedTypeName name="com.project.security.entity.ERole"/>
-    <fullyQualifiedTypeName name="com.project.security.payload.ErrorDetails"/>
     <fullyQualifiedTypeName name="com.project.security.service.AuthService"/>
     <fullyQualifiedTypeName name="com.project.security.payload.JWTAuthResponse"/>
     <fullyQualifiedTypeName name="com.project.security.payload.LoginDto"/>
@@ -19,7 +7,6 @@
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="lombok.ToString"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Enumerated"/>
     <fullyQualifiedTypeName name="jakarta.persistence.EnumType"/>
     <fullyQualifiedTypeName name="com.project.security.security.JwtAuthenticationFilter"/>
@@ -38,13 +25,8 @@
     <fullyQualifiedTypeName name="com.project.backend.security.payload.RegisterDto"/>
     <fullyQualifiedTypeName name="com.project.backend.security.security.JwtAuthenticationEntryPoint"/>
     <fullyQualifiedTypeName name="com.project.backend.security.security.JwtAuthenticationFilter"/>
-    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.cdi.JpaRepositoryExtension"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="com.project.backend.repository.SondaDaoRepository"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="jakarta.persistence.EntityExistsException"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -53,11 +35,29 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.boot.ApplicationRunner"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="io.micrometer.observation.annotation.Observed"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.project.backend.models.Sonda"/>
+    <fullyQualifiedTypeName name="com.project.backend.models.CentroControllo"/>
+    <fullyQualifiedTypeName name="com.project.backend.interfaces.Subject"/>
+    <fullyQualifiedTypeName name="com.project.backend.interfaces.Observer"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.project.backend.model.Sonda"/>
+    <fullyQualifiedTypeName name="com.project.backend.model.CentroControllo"/>
+    <fullyQualifiedTypeName name="com.project.backend.service.CentroControlloService"/>
+    <fullyQualifiedTypeName name="com.project.backend.repository.CentroControlloDaoRepository"/>
 </qualifiedTypeNameHistroy>
